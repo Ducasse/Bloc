@@ -31,21 +31,21 @@ BlAnchorLayoutRule >> isMeasurement [
 ]
 
 { #category : #accessing }
-BlAnchorLayoutRule >> leftHHandSideAnchor [
+BlAnchorLayoutRule >> leftHandSideAnchor [
 
 	^ leftHandSideAnchor 
 ]
 
 { #category : #accessing }
-BlAnchorLayoutRule >> leftHHandSideAnchor: anAnchor [
+BlAnchorLayoutRule >> leftHandSideAnchor: anAnchor [
 
 	leftHandSideAnchor := anAnchor
 ]
 
 { #category : #accessing }
-BlAnchorLayoutRule >> leftHandSideAnchor [
+BlAnchorLayoutRule >> rightHandSideAnchor [
 
-	^ leftHandSideAnchor 
+	^ rightHandSideAnchor
 ]
 
 { #category : #accessing }
