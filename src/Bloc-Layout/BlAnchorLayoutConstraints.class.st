@@ -1,5 +1,5 @@
 "
-I represent the constraints of a `BlProportionalLayout`.
+I represent the constraints of a `BlAnchorLayout`. The API is in the layout anchors protocol.
 "
 Class {
 	#name : #BlAnchorLayoutConstraints,
@@ -29,7 +29,7 @@ BlAnchorLayoutConstraints >> addAll: anAnchorRuleCollection [
 	rules addAll: anAnchorRuleCollection
 ]
 
-{ #category : #layout }
+{ #category : #layouting }
 BlAnchorLayoutConstraints >> applyRules: aRuleArray inParent: anElement forChild: aChild [
 
 	| bnds |
@@ -66,7 +66,7 @@ BlAnchorLayoutConstraints >> centerAnchor [
 	^ BlAnchorChildReceiver new centerAnchor
 ]
 
-{ #category : #layout }
+{ #category : #layouting }
 BlAnchorLayoutConstraints >> child [ 
 
 	^ BlAnchorChildReceiver new
@@ -115,7 +115,7 @@ BlAnchorLayoutConstraints >> leftAnchor [
 	^ BlAnchorChildReceiver new leftAnchor
 ]
 
-{ #category : #layout }
+{ #category : #layouting }
 BlAnchorLayoutConstraints >> measureInParent: anElement forChild: aChild [
 
 	^ self
@@ -124,7 +124,7 @@ BlAnchorLayoutConstraints >> measureInParent: anElement forChild: aChild [
 		  forChild: aChild
 ]
 
-{ #category : #layout }
+{ #category : #layouting }
 BlAnchorLayoutConstraints >> measurementRules [
 
 	^ rules select: [ :op | op isMeasurement ]
@@ -137,7 +137,7 @@ BlAnchorLayoutConstraints >> neutralAnchor: aNeutralValue [
 		  neutralAnchor: aNeutralValue
 ]
 
-{ #category : #layout }
+{ #category : #layouting }
 BlAnchorLayoutConstraints >> newExplicitReceiverWith: anElement [
 
 	^ BlAnchorExplicitReceiver element: anElement
@@ -149,7 +149,7 @@ BlAnchorLayoutConstraints >> nilAnchor [
 	^ BlAnchorChildReceiver new nilAnchor
 ]
 
-{ #category : #layout }
+{ #category : #layouting }
 BlAnchorLayoutConstraints >> parent [ 
 
 	^ BlAnchorParentReceiver new
@@ -167,7 +167,7 @@ BlAnchorLayoutConstraints >> pointAnchor [
 	^ BlAnchorChildReceiver new pointAnchor
 ]
 
-{ #category : #layout }
+{ #category : #layouting }
 BlAnchorLayoutConstraints >> positionInParent: anElement forChild: aChild [
 
 	| bnds ref translation |
@@ -180,7 +180,7 @@ BlAnchorLayoutConstraints >> positionInParent: anElement forChild: aChild [
 	^ bnds translateBy: translation
 ]
 
-{ #category : #layout }
+{ #category : #layouting }
 BlAnchorLayoutConstraints >> positionRules [
 
 	^ rules reject: [ :op | op isMeasurement ]

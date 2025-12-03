@@ -151,7 +151,7 @@ BlAnchor >> isMeasurement [
 	^ false
 ]
 
-{ #category : #'instance creation' }
+{ #category : #API }
 BlAnchor >> on: anAnchor [
 
 	^ BlAnchorLayoutRule new
